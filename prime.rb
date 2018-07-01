@@ -1,5 +1,17 @@
-# Add  code here!
-prime?(p)
-Prime.each(100) do |prime|
-  p prime  #=> 2, 3, 5, 7, 11, ...., 97
-end
+def prime?(n)
+  for d in 2..(n - 1)
+   if (n % d) == 0
+    return false
+   end
+  end
+
+  true
+ end
+
+ def is_prime2 n
+  foundDivider = false
+   for d in 2..(n - 1)
+    foundDivider = ((n % d) == 0) or foundDivider
+   end
+  not foundDivider
+ end
